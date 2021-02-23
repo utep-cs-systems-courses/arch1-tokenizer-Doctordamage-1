@@ -148,6 +148,16 @@ void free_tokens(char **tokens)
 
 
 short string_length(char *str)
+{
+  int index = 0;
+  short length = 0;
+  while(*(str+index) != '\0')
+    {
+      length += 1;
+      index++;
+    }
+  return length;
+}
 
 
 int word_length(char *str)
