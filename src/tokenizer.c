@@ -161,3 +161,16 @@ short string_length(char *str)
 
 
 int word_length(char *str)
+{
+  int index = 0;
+  int length = 0;
+  while(*(str+index) != '\0')
+    {
+      if (non_space_char(*(str+index)))
+	length++;
+      else
+	break;
+      index++;
+    }
+  return length;
+}
