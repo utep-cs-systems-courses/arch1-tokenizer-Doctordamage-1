@@ -136,5 +136,13 @@ void print_tokens(char **tokens)
 
 /* Frees all tokens and the vector containing themx. */
 void free_tokens(char **tokens)
-
+{
+  int index = 0;
+  while (tokens[index] != 0)
+    {
+      free(tokens[index]);
+      index++;
+    }
+  free(tokens);
+}
 
