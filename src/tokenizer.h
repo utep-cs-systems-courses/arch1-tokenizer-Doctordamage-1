@@ -44,4 +44,10 @@ void print_tokens(char **tokens);
 /* Frees all tokens and the vector containing themx. */
 void free_tokens(char **tokens);
 
+/* Returns the length of the string. */
+short string_length(char *str);
+
+/* Returns the length of a single word. */
+int word_length(char *str);
+
 #endif
