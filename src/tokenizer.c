@@ -81,10 +81,21 @@ int *count_words(char *str)
 /* Returns a fresly allocated new zero-terminated string 
    containing <len> chars from <inStr> */
 char *copy_str(char *inStr, short len);
-
+{
+  char *dupe = malloc((len+1) * sizeof(char));
+  int index = 0;
+  while (index < len)
+    {
+      dupe[index] = inStr[index];
+      index++;
+    }
+  dupe[index] ='\0';
+  return dupe;
+}
 
 /* Returns a freshly allocated zero-terminated vector of freshly allocated 
    space-separated tokens from zero-terminated str.
+
    For example, tokenize("hello world string") would result in:
      tokens[0] = "hello"
      tokens[1] = "world"
