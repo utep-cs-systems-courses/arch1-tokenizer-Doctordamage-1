@@ -124,7 +124,14 @@ char **tokenize(char* str)
 
 /* Prints all tokens. */
 void print_tokens(char **tokens)
-
+{
+  int index = 0;
+  while(tokens[index] != 0)
+    {
+      printf("%s\n", tokens[index]);
+      index++;
+    }
+}
 
 
 /* Frees all tokens and the vector containing themx. */
