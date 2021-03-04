@@ -31,7 +31,14 @@ void add_history(List *list, char *str){
 /* Retrieve the string stored in the node where Item->id == id.
    List* list - the linked list
    int id - the id of the Item to find */
-char *get_history(List *list, int id);
+char *get_history(List *list, int id){
+  Item *node = list->root;
+  while (node->next){
+      if (node->id == id)
+	return node->str;
+      node = node->next;
+    }
+}
 
 
 /*Print the entire contents of the list. */
