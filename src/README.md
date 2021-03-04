@@ -1,12 +1,8 @@
 Project 1: Tokenizer
 ====================
 # Instructions:
+Once inside the directory /src type make clean to complie the program, then
+type './main' to run.
 
-You should document your tokenizer in this file.
-
-This file is written in the refreshingly simple `markdown` text
-formatting language.
-
-To learn about text formatting using markdown, we encourage you to examine 
- - [../README.md](../README.md)
- - the online [Markdown Guide](https://www.markdownguide.org/).
+The user has to two chooses: input 0 to enter a String or input 1 to view the
+history. the user can exit the program by pressing C-x C-c.
