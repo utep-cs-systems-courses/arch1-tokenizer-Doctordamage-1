@@ -15,7 +15,17 @@ List* init_history(){
    List* list - the linked list
    char* str - the string to store
 */
-void add_history(List *list, char *str);
+void add_history(List *list, char *str){
+  int index = 1;
+  Item *node = list->root;
+  while (node->next){
+      node = node->next;
+      index++;
+    }
+  node->next = malloc(sizeof(Item));
+  node->next->str = copy_str(str, string_length(str));
+  node->next->id = index;
+}
 
 
 /* Retrieve the string stored in the node where Item->id == id.
