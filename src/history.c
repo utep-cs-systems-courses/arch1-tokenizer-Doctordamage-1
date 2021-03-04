@@ -42,7 +42,13 @@ char *get_history(List *list, int id){
 
 
 /*Print the entire contents of the list. */
-void print_history(List *list);
+void print_history(List *list){
+  Item *node = list->root;
+  while (node){
+      printf("%d. %s", node->id, node->str);
+      node = node->next;
+    }
+}
 
 
 /*Free the history list and the strings it references. */
