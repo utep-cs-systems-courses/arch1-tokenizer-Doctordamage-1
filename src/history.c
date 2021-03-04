@@ -52,5 +52,12 @@ void print_history(List *list){
 
 
 /*Free the history list and the strings it references. */
-void free_history(List *list);
-
+void free_history(List *list){
+  Item *current = list->root;
+  while (current){
+      Item *next = current->next;
+      free(current);
+      current = next;
+    }
+  free(list);
+}
